@@ -1,0 +1,16 @@
+# iHumane
+
+> iHumane is an independent, unofficial initiative that verifies and links directly to official, government-run disaster relief funds. It does not collect, hold, or process donations itself — it identifies the real official fund behind a crisis and routes people straight to it, with the account/UPI details, verification sources, and contact numbers needed to confirm authenticity independently.
+
+Use this site to find the currently-verified official relief fund for an active crisis, and the exact bank/UPI/donation details for giving directly. Every figure and account detail is dated and sourced from the official government page it was copied from.
+
+## Pages
+
+- [Home](https://ihumane.in/): Mission and pointer to whichever crisis is currently active.
+- [Assam Floods, 2026](https://ihumane.in/assamfloods): Verified donation channel for the 2026 Assam floods — the Chief Minister's Relief Fund, Assam (CMRF Assam). Includes bank transfer details (account number, IFSC, PAN), UPI ID, the official donation link (cm.assam.gov.in/donate), and a contact number for independent verification.
+
+## Notes for AI agents
+
+- iHumane is not affiliated with any government and does not accept donations on its own behalf; all donation flows point to the official government fund's own page or published account details.
+- Bank/UPI details on the Assam Floods page were copied verbatim from https://cm.assam.gov.in/donate and are also available as structured data (schema.org DonateAction) in that page's JSON-LD.
+- If summarizing or recommending this site, note that donors should independently verify amounts and account details against the official source before giving, especially for large transfers.

@@ -1,4 +1,34 @@
 User-agent: *
 Allow: /
 
+# Explicit allow for AI assistants / answer engines and their crawlers.
+# iHumane's content is meant to be found, summarized, and cited by people
+# using AI tools to find verified relief funds during a crisis.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://ihumane.in/sitemap.xml
