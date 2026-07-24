@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ihumane.in/sitemap.xml
