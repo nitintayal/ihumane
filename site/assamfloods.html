@@ -146,6 +146,60 @@
   .share-link:hover{background:#d4e3e4;}
   .share-link:focus-visible{outline:2px solid var(--river);outline-offset:2px;}
 
+  .photo-marquee-wrap{margin:32px 0 8px;}
+  .photo-marquee-note{font-size:12.5px;color:var(--grey);margin:0 0 12px;}
+  .photo-marquee{
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  }
+  .photo-marquee-track{
+    display:flex;
+    gap:16px;
+    width:max-content;
+    animation:marquee-scroll 36s linear infinite;
+  }
+  .photo-marquee:hover .photo-marquee-track{animation-play-state:paused;}
+  @keyframes marquee-scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  .photo-card{
+    flex:none;
+    width:240px;
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:16px;
+    text-decoration:none;
+    display:block;
+  }
+  .photo-card:hover{border-color:var(--river);}
+  .photo-card .outlet{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--river);
+    display:block;
+    margin-bottom:8px;
+  }
+  .photo-card .headline{
+    font-size:14px;
+    color:var(--ink);
+    line-height:1.4;
+    margin:0 0 10px;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .photo-card .tag{font-size:12px;color:var(--grey);font-weight:600;}
+  @media (prefers-reduced-motion: reduce){
+    .photo-marquee-track{animation:none;}
+    .photo-marquee{overflow-x:auto;}
+  }
+
   .redirect-note{
     font-size:12.5px;
     color:var(--grey);
@@ -404,6 +458,64 @@
       </div>
       <p style="margin:6px 0 0;"><a class="link-secondary" href="assets/assamfloods-poster.png" download="ihumane-assam-floods-2026.png" style="font-size:13px;">Download a shareable poster (with QR code) →</a></p>
 
+      <div class="photo-marquee-wrap">
+        <p class="photo-marquee-note">See it for yourself — real coverage from the ground. We don't host these photos ourselves; each card opens the original report at the source.</p>
+        <div class="photo-marquee">
+          <div class="photo-marquee-track">
+            <a class="photo-card" href="https://epaper.assamtribune.com/guwahati/500-excess-rainfall-not-cloudburst-triggered-upper-assam-floods-cm-sarma-1614702" target="_blank" rel="noopener">
+              <span class="outlet">The Assam Tribune</span>
+              <span class="headline">"500% excess rainfall, not cloudburst" — CM Sarma on what caused the Upper Assam floods</span>
+              <span class="tag">Full report →</span>
+            </a>
+            <a class="photo-card" href="https://news.mongabay.com/short-article/2026/07/at-least-50-people-killed-and-700000-displaced-by-india-floods-after-monsoon-rains/" target="_blank" rel="noopener">
+              <span class="outlet">Associated Press</span>
+              <span class="headline">At least 50 killed, 700,000 displaced as monsoon rains overflow the Brahmaputra</span>
+              <span class="tag">Report + photo →</span>
+            </a>
+            <a class="photo-card" href="https://www.deccanherald.com/india/in-pictures-striking-photos-capture-devastating-impact-of-assam-floods-4083129" target="_blank" rel="noopener">
+              <span class="outlet">Deccan Herald</span>
+              <span class="headline">In Pictures: striking photos capture the devastating impact of the Assam floods</span>
+              <span class="tag">Photo gallery →</span>
+            </a>
+            <a class="photo-card" href="https://www.business-standard.com/india-news/assam-flood-toll-rises-to-47-over-721-000-affected-across-11-districts-126072400025_1.html" target="_blank" rel="noopener">
+              <span class="outlet">Business Standard</span>
+              <span class="headline">Assam flood toll rises to 47, over 721,000 affected across 11 districts</span>
+              <span class="tag">Full report →</span>
+            </a>
+            <a class="photo-card" href="https://eastmojo.com/premium/2026/07/23/how-torrential-rain-in-nagaland-devastated-upper-assam/" target="_blank" rel="noopener">
+              <span class="outlet">EastMojo</span>
+              <span class="headline">How torrential rain in Nagaland devastated Upper Assam</span>
+              <span class="tag">Full report →</span>
+            </a>
+            <a class="photo-card" href="https://epaper.assamtribune.com/guwahati/500-excess-rainfall-not-cloudburst-triggered-upper-assam-floods-cm-sarma-1614702" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <span class="outlet">The Assam Tribune</span>
+              <span class="headline">"500% excess rainfall, not cloudburst" — CM Sarma on what caused the Upper Assam floods</span>
+              <span class="tag">Full report →</span>
+            </a>
+            <a class="photo-card" href="https://news.mongabay.com/short-article/2026/07/at-least-50-people-killed-and-700000-displaced-by-india-floods-after-monsoon-rains/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <span class="outlet">Associated Press</span>
+              <span class="headline">At least 50 killed, 700,000 displaced as monsoon rains overflow the Brahmaputra</span>
+              <span class="tag">Report + photo →</span>
+            </a>
+            <a class="photo-card" href="https://www.deccanherald.com/india/in-pictures-striking-photos-capture-devastating-impact-of-assam-floods-4083129" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <span class="outlet">Deccan Herald</span>
+              <span class="headline">In Pictures: striking photos capture the devastating impact of the Assam floods</span>
+              <span class="tag">Photo gallery →</span>
+            </a>
+            <a class="photo-card" href="https://www.business-standard.com/india-news/assam-flood-toll-rises-to-47-over-721-000-affected-across-11-districts-126072400025_1.html" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <span class="outlet">Business Standard</span>
+              <span class="headline">Assam flood toll rises to 47, over 721,000 affected across 11 districts</span>
+              <span class="tag">Full report →</span>
+            </a>
+            <a class="photo-card" href="https://eastmojo.com/premium/2026/07/23/how-torrential-rain-in-nagaland-devastated-upper-assam/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+              <span class="outlet">EastMojo</span>
+              <span class="headline">How torrential rain in Nagaland devastated Upper Assam</span>
+              <span class="tag">Full report →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <h2 class="subhead">Situation, as reported</h2>
       <div class="card">
         <div class="field-grid">
@@ -412,7 +524,7 @@
           <div class="field"><span class="field-label">Worst-hit district</span><span class="field-value">Sivasagar</span></div>
           <div class="field"><span class="field-label">Cause</span><span class="field-value">Unprecedented rainfall over Nagaland's hills</span></div>
         </div>
-        <p class="info-note">Figures are drawn from ASDMA-sourced reporting as of 24 July 2026 and are still changing — check ASDMA's own bulletins for live updates. Some early reports called this a "cloudburst"; the India Meteorological Department has said the rainfall recorded did not meet the technical threshold for one, though it was still far above normal. Sources: <a href="https://www.business-standard.com/india-news/assam-flood-toll-rises-to-47-over-721-000-affected-across-11-districts-126072400025_1.html" target="_blank" rel="noopener">Business Standard</a>, <a href="https://eastmojo.com/premium/2026/07/23/how-torrential-rain-in-nagaland-devastated-upper-assam/" target="_blank" rel="noopener">EastMojo</a>.</p>
+        <p class="info-note">Figures are drawn from ASDMA-sourced reporting as of 24 July 2026 and are still changing — check ASDMA's own bulletins for live updates. Some early reports called this a "cloudburst"; Chief Minister Himanta Biswa Sarma has said the IMD ruled that out — "technically, it was an episode of extremely heavy rainfall" — citing rainfall up to 493% above normal in the worst-hit areas. Sources: <a href="https://epaper.assamtribune.com/guwahati/500-excess-rainfall-not-cloudburst-triggered-upper-assam-floods-cm-sarma-1614702" target="_blank" rel="noopener">The Assam Tribune</a>, <a href="https://www.business-standard.com/india-news/assam-flood-toll-rises-to-47-over-721-000-affected-across-11-districts-126072400025_1.html" target="_blank" rel="noopener">Business Standard</a>, <a href="https://eastmojo.com/premium/2026/07/23/how-torrential-rain-in-nagaland-devastated-upper-assam/" target="_blank" rel="noopener">EastMojo</a>.</p>
       </div>
 
       <h2 class="subhead">Give by bank transfer or UPI instead</h2>
